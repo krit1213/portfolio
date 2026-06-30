@@ -115,10 +115,10 @@ const PORTFOLIO = {
       "challenge": "Solving a real word problem ",
       "team": "Solo",
       "role": "Founder & Lead Developer",
-      "solution": "UniSphere",
-      "demo": "",
+      "solution": "UniSphere - Verified peer networks and goal-driven path-mapping for the university ecosystem.",
+      "demo": "https://glowing-creponne-8b9520.netlify.app",
       "result": "Pending",
-      "reflection": "What you'd do differently."
+      "reflection": "Establish Strict \"Context Guardrails\" from Day One\n\nIn the beginning, I wanted the AI to understand everything about UniSphere all at once, which led to the AI getting confused and bloated with too many ideas.\n\nHence, from now on, I would segment my prompts right from the start. I would force the AI to focus entirely on building and perfecting one specific user flow (like the student gap-mapping) before letting it even look at the other sides of the platform (like the recruiter dashboard). Keeping the AI's focus narrow prevents it from losing track of the core vision."
     }
   ],
   "leadership": [
