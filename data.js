@@ -81,10 +81,10 @@ const PORTFOLIO = {
   "writing": [
     {
       "id": "writing-one",
-      "title": "Article / Reflection Title",
-      "type": "Project Retrospective",
-      "date": "June 2025",
-      "summary": "One paragraph summary of what this piece covers and why you wrote it.",
+      "title": "CFG2002 - Global Industry Insights (Philippines)",
+      "type": "Global Exposure",
+      "date": "May 2026",
+      "summary": "When I first signed up for the study trip to the Philippines, I expected to learn about different companies and industries. What I did not expect was how much it would change the way I think about technology.\n\nVisiting organisations like SAP Philippines, the Asian Development Bank, UnionBank, ACEN Renewables, Mondelez International, and KMC Solutions showed me that technology isn't just about building software. It is about solving real business problems, improving people's lives, and creating lasting impact. Every conversation and company visit offered a different perspective on innovation, whether it was digital banking, enterprise systems, sustainability, or the future of work.\n\nWhat stayed with me most wasn't any single technology. It was seeing how the best organisations start with understanding people and their challenges before designing solutions. That experience made me realise that the kind of work I want to do sits at the intersection of technology, business, and human needs. It reinforced my belief that meaningful innovation isn't about building the most complex solution. It is about building the right one.\n",
       "link": "",
       "content": ""
     }
@@ -173,14 +173,9 @@ const PORTFOLIO = {
     ],
     "courses": [
       {
-        "name": "CS1101S — Programming Methodology",
+        "name": "CFG2002 - Global Industry Insights",
         "institution": "NUS",
-        "year": "2025"
-      },
-      {
-        "name": "CS50x",
-        "institution": "Harvard / edX",
-        "year": "2024"
+        "year": "2026"
       }
     ],
     "reading": [
