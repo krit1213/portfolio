@@ -5,11 +5,11 @@
 const PORTFOLIO = {
   "name": "Krithiga Kaleeswaran",
   "tagline": "Learning by Building!",
-  "intro": "",
-  "photo": "",
+  "intro": "Hi! I am Krithiga, a Computer Science undergraduate at the National University of Singapore. I am passionate about building technology that solves real-world problems and creating meaningful impact through AI, enterprise technology, and product innovation. I enjoy exploring new ideas, leading initiatives, and continuously learning as I grow both as a technologist and as a person.",
+  "photo": "assets/Kaleeswaran_Krithiga.jpg",
   "email": "krithigak@hotmail.com",
-  "github": "",
-  "linkedin": "",
+  "github": "https://github.com/krit1213",
+  "linkedin": "linkedin.com/in/krithigakaleeswaran",
   "resumePDF": "",
   "about": {
     "journey": "My journey has been shaped by a curiosity to learn, a passion for solving problems, and a desire to create meaningful impact. From leading community initiatives and volunteering to building AI-powered solutions and exploring enterprise technology through global industry exposure, every experience has helped me grow both personally and professionally. Along the way, I've discovered that my passion lies at the intersection of technology, business, and innovation. Using technology not just to build software, but to create solutions that make a difference.",
