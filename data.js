@@ -97,23 +97,7 @@ const PORTFOLIO = {
       "content": ""
     }
   ],
-  "experience": [
-    {
-      "id": "exp-one",
-      "role": "Administrative Assistant",
-      "company": "Prudential Assurance (VCO Agency)",
-      "period": "Feb - Mar 2025",
-      "type": "Part-Time",
-      "problem": "What business problem were you brought in to solve?",
-      "stakeholders": "Who were the stakeholders?",
-      "constraints": "What constraints did you work under?",
-      "approach": "How did you approach the solution?",
-      "architecture": "Technical overview if applicable.",
-      "decisions": "Key decisions you made and why.",
-      "outcome": "What was the result? Be specific.",
-      "lessons": "What did you learn?"
-    }
-  ],
+  "experience": [],
   "hackathons": [
     {
       "id": "hack-one",
@@ -131,6 +115,16 @@ const PORTFOLIO = {
   ],
   "leadership": [
     {
+      "id": "3lpawfx",
+      "title": "Orientation Group Leader",
+      "organisation": "NUS School of Computing",
+      "period": "July 2024",
+      "type": "Freshmen Orientation Week",
+      "impact": "",
+      "teamSize": "",
+      "skills": []
+    },
+    {
       "id": "lead-one",
       "title": "Vice President",
       "organisation": "Red Cross Youth (Nanyang JC Chapter)",
@@ -144,14 +138,16 @@ const PORTFOLIO = {
       ]
     },
     {
-      "id": "3lpawfx",
-      "title": "Orientation Group Leader",
-      "organisation": "NUS School of Computing",
-      "period": "July 2024",
-      "type": "Freshmen Orientation Week",
-      "impact": "",
-      "teamSize": "",
-      "skills": []
+      "id": "lv6kz27",
+      "title": "Volunteer",
+      "organisation": "Red Cross Youth",
+      "period": "2023 - Present",
+      "type": "Community Service",
+      "impact": "Volunteering has shaped the way I approach both life and technology. It taught me to look beyond problems and understand the people behind them. Whether providing first aid, supporting community events, or working alongside fellow volunteers, I learned the importance of empathy, teamwork, and staying composed in challenging situations. These experiences continue to influence the way I build solutions today. Always starting with people and their needs.\n",
+      "teamSize": "-",
+      "skills": [
+        "First Aid"
+      ]
     }
   ],
   "learning": {
