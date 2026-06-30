@@ -138,6 +138,19 @@ const PORTFOLIO = {
       ]
     },
     {
+      "id": "dol9via",
+      "title": "Volunteer",
+      "organisation": "Sengkang General Hospital",
+      "period": "2023 - Present",
+      "type": "Healthcare",
+      "impact": "Volunteering at Sengkang General Hospital taught me that healing goes beyond medical treatment. Sometimes, simply spending time with a patient, listening to their story, or offering encouragement can make a meaningful difference to their hospital experience. It showed me the importance of empathy, patience, and human connection, and reminded me that even small acts of kindness can have a lasting impact on someone's recovery journey.",
+      "teamSize": "-",
+      "skills": [
+        "Communication",
+        "Teamwork"
+      ]
+    },
+    {
       "id": "lv6kz27",
       "title": "Volunteer",
       "organisation": "Red Cross Youth",
@@ -150,16 +163,15 @@ const PORTFOLIO = {
       ]
     },
     {
-      "id": "dol9via",
-      "title": "Volunteer",
-      "organisation": "Sengkang General Hospital",
-      "period": "2023 - Present",
-      "type": "Healthcare",
-      "impact": "Volunteering at Sengkang General Hospital taught me that healing goes beyond medical treatment. Sometimes, simply spending time with a patient, listening to their story, or offering encouragement can make a meaningful difference to their hospital experience. It showed me the importance of empathy, patience, and human connection, and reminded me that even small acts of kindness can have a lasting impact on someone's recovery journey.",
-      "teamSize": "-",
+      "id": "6001ule",
+      "title": "Exco Member ",
+      "organisation": "Student Council (Temasek Secondary School)",
+      "period": "2019 - 2022",
+      "type": "Leadership",
+      "impact": "",
+      "teamSize": "",
       "skills": [
-        "Communication",
-        "Teamwork"
+        "Event Planning"
       ]
     }
   ],
