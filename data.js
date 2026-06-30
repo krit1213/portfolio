@@ -53,15 +53,13 @@ const PORTFOLIO = {
   "ai": [
     {
       "id": "ai-one",
-      "title": "AI Experiment / Project",
-      "subtitle": "What it does in one line",
+      "title": "Sousa ",
+      "subtitle": "An AI agent that reduces food waste by helping busy working adults plan meals based on what's already in their fridge.",
       "tags": [
-        "LLM",
-        "Python",
-        "OpenAI API"
+        "Microsoft Copilot"
       ],
-      "description": "What you built, what model/tools you used, and what you learned.",
-      "insight": "Key insight or takeaway from this experiment.",
+      "description": "A professional pitch deck for Microsoft Copilot Buildathon 2026:\n- 4-slide presentation for Sousa (AI kitchen agent solving food waste)\n- High-contrast black/white design with electric lime green accents\n- GitHub-ready repository with styled README documentation\n- Data-verified statistics \n\n---\n\n### **TOOLS & MODELS USED**\n\n**Development:**\n- pptxgenjs (Node.js for PowerPoint generation)\n- Bookman Old Style font (headings)\n- Electric Lime Green (#AAFF00) accent colour\n- LibreOffice + pdftoppm (QA/preview)\n- Bash scripting (automation)\n\n**AI & Research:**\n- Claude (Sonnet 4.6) — design, copywriting, fact-checking\n- Web search — verify statistics\n- Microsoft Copilot — target platform\n\n---\n\n### **WHAT I LEARNED**\n\n**Design Principles:**\n- High-contrast colours make judges stop and look\n- Bold typography signals quality and confidence\n- Break expected patterns to be memorable\n- Professional doesn't mean safe — boldness wins\n\n**Product Strategy:**\n- Statistics must be verified (wrong data destroys credibility)\n- Target working adults 25-40 (time pressure, real pain points)\n- Specific scenarios outperform generic messaging ($2,913/year > \"significant waste\")\n\n**Pitch Structure:**\n- 4-slide formula works: Hook → Problem → Solution → Why Win\n- Avoid redundancy (don't repeat information across slides)\n- Visual differentiation keeps attention and rhythm\n\n**Competitive Advantage:**\n- Stand out through design, not just copy\n- Judges weight equally: Innovation (25%), Impact (25%), Technical (25%), Presentation (25%)\n- Iteration matters — know when to pivot vs. polish\n\n---\n\n",
+      "insight": "### **KEY INSIGHTS**\n\n**How you present shapes what judges believe.** Design is strategy, not decoration. V3's bold aesthetic signals intentionality and confidence.\n\n**Specificity beats generality.** \"1 billion meals wasted daily\" and \"$2,913/year\" are more memorable than vague claims. Data with sources = trust.\n\n**Every element must earn its place.** Redundancy wastes attention. If Slide 3 explains the 5-step flow, don't repeat it in Slide 1 footer tags.\n\n**Iteration leads to conviction.** Creating V1 and V2 taught me which direction was strongest. Committing fully to V3 made it better.\n\n**Documentation is a portfolio piece.** Your README reflects your attention to detail. Judges review GitHub repos. Make it count.",
       "link": "",
       "github": ""
     }
