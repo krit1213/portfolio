@@ -3,25 +3,25 @@
 // ═══════════════════════════════════════════════════════════════
 
 const PORTFOLIO = {
-  "name": "Kaleeswaran Krithiga",
-  "tagline": "Learning by building!",
-  "intro": "Hi, I'm Krithiga. I enjoy building products that solve real problems, especially at the intersection of AI and technology. I am always curious to learn, experiment with new ideas, and turn them into something people genuinely find useful.",
-  "photo": "assets/Kaleeswaran_Krithiga_A0334977L_Photo.jpg",
-  "email": "krithigak@hotmail.com",
-  "github": "https://github.com/krit1213",
-  "linkedin": "https://linkedin.com/in/username",
-  "resumePDF": "assets/resume.pdf",
+  "name": "",
+  "tagline": "",
+  "intro": "",
+  "photo": "",
+  "email": "",
+  "github": "",
+  "linkedin": "",
+  "resumePDF": "",
   "about": {
-    "journey": "I first touched code in secondary school — a Python script that sorted my Spotify playlists. It broke three times before it worked. That was the moment I was hooked: not by the output, but by the process of debugging something I'd built myself.",
-    "passion": "I'm drawn to product engineering — the intersection of user empathy, design thinking, and technical execution. I want to build things people actually use, not just things that compile.",
+    "journey": "",
+    "passion": "",
     "interests": [
       "AI & LLM applications",
       "Product engineering",
       "Developer tooling",
       "Human-computer interaction"
     ],
-    "values": "I believe great software is quiet — it solves the problem without making itself the problem. I care about simplicity, iteration speed, and honest feedback loops.",
-    "aspirations": "I want to work on products that reach millions of people. Eventually I'd like to found something. Right now, I'm focused on learning how to build well."
+    "values": "",
+    "aspirations": ""
   },
   "projects": [
     {
