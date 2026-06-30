@@ -3,25 +3,25 @@
 // ═══════════════════════════════════════════════════════════════
 
 const PORTFOLIO = {
-  "name": "Krithiga Kaleeswaran",
-  "tagline": "Learning by building!",
-  "intro": "Hi, I am Krithiga. I enjoy building products that solve real problems, especially at the intersection of AI and technology. I am always curious to learn, experiment with new ideas, and turn them into something people genuinely find useful.",
-  "photo": "assets/Kaleeswaran_Krithiga.jpg",
-  "email": "krithigak@hotmail.com",
-  "github": "https://github.com/krit1213",
-  "linkedin": "linkedin.com/in/krithigakaleeswaran",
+  "name": "",
+  "tagline": "",
+  "intro": "",
+  "photo": "",
+  "email": "",
+  "github": "",
+  "linkedin": "",
   "resumePDF": "",
   "about": {
-    "journey": "My journey has been shaped by a passion for combining technology, leadership, and innovation to solve real-world problems. From leading community initiatives as Vice President of Red Cross Youth of Nanyang JC to building AI-powered solutions through Microsoft Copilot Buildathon, I have continuously sought opportunities to grow beyond the classroom. International industry exposure further strengthened my interest in enterprise technology and digital transformation. Today, I aspire to bridge business and technology by designing intelligent solutions that create meaningful impact.",
-    "passion": "I build because I enjoy turning ideas into solutions that make a real difference. For me, technology is more than writing code. It is a tool to solve meaningful problems, improve experiences, and create value for people. Every project is an opportunity to understand a problem deeply, explore different possibilities, and transform an idea into something practical that others can use. Building allows me to combine creativity, technical thinking, and business understanding, which is why I am passionate about creating products that have a lasting impact.",
+    "journey": "",
+    "passion": "",
     "interests": [
       "AI & LLM applications",
       "Product engineering",
-      "Business Strategy & Innovation",
-      "Product Management"
+      "Developer tooling",
+      "Human-computer interaction"
     ],
-    "values": "I believe technology is most meaningful when it improves people's lives and solves real-world problems. My values are grounded in curiosity, integrity, ownership, and service. I strive to approach every opportunity with a willingness to learn, the courage to take initiative, and the humility to collaborate with others. Whether building AI solutions, leading teams, or serving the community, I aim to create work that is thoughtful, impactful, and driven by purpose.",
-    "aspirations": "My aspiration is to build a career at the intersection of technology, business, and innovation. I aim to design AI-powered and enterprise-scale solutions that solve complex real-world problems while creating meaningful value for organisations and society. In the long term, I hope to grow into a technology leader who bridges technical expertise with strategic thinking, enabling organisations to embrace digital transformation and build products that make a lasting impact."
+    "values": "",
+    "aspirations": ""
   },
   "projects": [
     {
@@ -46,31 +46,6 @@ const PORTFOLIO = {
       "future": "Now that the core platform is built, here is where I want to take UniSphere next:\n\n1. Deeper Integration with Real Campus Data: I want to expand the platform so it can seamlessly connect directly with actual university databases, making the \"Verified\" milestone badges even more automated and seamless.\n\n2. Interactive Roadmap Sandbox: I want to upgrade the Gap-Mapping tool from a static step-by-step list into an interactive simulation tool, where students can toggle different future modules to instantly see how it changes their career trajectory.\n\n3. Smart Notification Hub: Instead of students needing to check the dashboard constantly, I want to build a smart alert system that gently pings a student only when a high-substance opportunity or mentor matching their exact gap-map becomes available.",
       "demo": "https://glowing-creponne-8b9520.netlify.app",
       "github": "https://admirable-churros-b519e7.netlify.app",
-      "screenshots": "",
-      "thumbnail": ""
-    },
-    {
-      "id": "39rfsp7",
-      "title": "",
-      "subtitle": "",
-      "featured": "",
-      "problem": "",
-      "users": "",
-      "solution": "",
-      "vision": "",
-      "role": "",
-      "team": "",
-      "designProcess": "",
-      "architecture": "",
-      "technologies": [],
-      "tags": [],
-      "challenges": "",
-      "tradeoffs": "",
-      "results": "",
-      "lessons": "",
-      "future": "",
-      "demo": "",
-      "github": "",
       "screenshots": "",
       "thumbnail": ""
     }
@@ -134,15 +109,15 @@ const PORTFOLIO = {
   "hackathons": [
     {
       "id": "hack-one",
-      "name": "Hackathon Name",
-      "organiser": "Organiser",
-      "date": "2025",
-      "challenge": "What was the problem statement?",
-      "team": "Your team composition.",
-      "role": "Your specific role.",
-      "solution": "What you built.",
+      "name": "APEX AI Bootcamp 2026",
+      "organiser": "Digital Defence Alliance Singapore (DDAS) & National Youth Council (NYC)",
+      "date": "2026",
+      "challenge": "Solving a real word problem ",
+      "team": "Solo",
+      "role": "Founder & Lead Developer",
+      "solution": "UniSphere",
       "demo": "",
-      "result": "Prize / outcome.",
+      "result": "Pending",
       "reflection": "What you'd do differently."
     }
   ],
@@ -270,7 +245,7 @@ const PORTFOLIO = {
     {
       "name": "Google AI Essentials",
       "issuer": "Google",
-      "year": " 2026",
+      "year": "2026",
       "category": "AI",
       "link": "assets/Coursera_8YZHWI2SM12G-2.pdf"
     },
@@ -280,14 +255,6 @@ const PORTFOLIO = {
       "year": "May 2026",
       "category": "UI",
       "link": "assets/Coursera_C96G5YYZOSBJ-2.pdf"
-    },
-    {
-      "id": "v4kuakz",
-      "name": "",
-      "issuer": "",
-      "year": "",
-      "category": "",
-      "link": ""
     }
   ],
   "problems": [
@@ -302,8 +269,8 @@ const PORTFOLIO = {
   ],
   "currentlyBuilding": [
     {
-      "title": "This Portfolio",
-      "description": "Iterating on the CS3216 portfolio — adding content, refining the narrative.",
+      "title": "Personal Portfolio Website",
+      "description": "",
       "stage": "Active",
       "link": ""
     }
