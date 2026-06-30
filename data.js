@@ -111,6 +111,19 @@ const PORTFOLIO = {
       "demo": "https://glowing-creponne-8b9520.netlify.app",
       "result": "Pending",
       "reflection": "Establish Strict \"Context Guardrails\" from Day One\n\nIn the beginning, I wanted the AI to understand everything about UniSphere all at once, which led to the AI getting confused and bloated with too many ideas.\n\nHence, from now on, I would segment my prompts right from the start. I would force the AI to focus entirely on building and perfecting one specific user flow (like the student gap-mapping) before letting it even look at the other sides of the platform (like the recruiter dashboard). Keeping the AI's focus narrow prevents it from losing track of the core vision."
+    },
+    {
+      "id": "3l7gbsv",
+      "name": "Microsoft Copilot Buildathon 2026",
+      "organiser": "Microsoft",
+      "date": "2026",
+      "challenge": "Open Category",
+      "team": "1",
+      "role": "Individual",
+      "solution": "Sousa - Agentic Co-chef",
+      "result": "Certificate of Participation",
+      "reflection": "If I were to rebuild Sousa, I would focus less on the technology and more on understanding users. I'd validate the problem earlier, gather continuous feedback, and iterate based on real needs to build a product that delivers greater impact.",
+      "demo": "https://drive.google.com/drive/folders/1Wf9L136ljI0Q-R06AanQToWmMf9BR8H9?usp=sharing"
     }
   ],
   "leadership": [
