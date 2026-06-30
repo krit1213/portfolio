@@ -3,13 +3,13 @@
 // ═══════════════════════════════════════════════════════════════
 
 const PORTFOLIO = {
-  "name": "",
-  "tagline": "",
+  "name": "Krithiga Kaleeswaran",
+  "tagline": "Learning by building!",
   "intro": "",
   "photo": "",
-  "email": "",
-  "github": "",
-  "linkedin": "",
+  "email": "krithigak@hotmail.com",
+  "github": "https://github.com/krit1213",
+  "linkedin": "linkedin.com/in/krithigakaleeswaran",
   "resumePDF": "",
   "about": {
     "journey": "",
