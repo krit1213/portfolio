@@ -67,16 +67,15 @@ const PORTFOLIO = {
   "product": [
     {
       "id": "pt-one",
-      "title": "Product Case Study / Thinking Piece",
-      "type": "User Research",
+      "title": "Shopee Pickup Points Strategy",
+      "type": "Product Strategy & Growth Marketing",
       "tags": [
-        "User Research",
-        "Personas",
-        "Journey Map"
+        "Product Strategy",
+        "Business Strategy"
       ],
-      "description": "Describe the product thinking exercise — what problem, what users, what you discovered.",
-      "outcome": "What did this lead to? A prototype, a pivot, a decision?",
-      "link": ""
+      "description": "1. The Strategic Problem\n\nThe Core Bottleneck: Shopee experienced lower-than-projected consumer adoption for its offline logistics innovation, Shopee Pickup Points (SPP), with regional checkout utilization hovering at a stagnation point of just 9–14%.\n\n\nThe Business Stakes: This deficit persisted despite Shopee holding a commanding 59% market share in Southeast Asia's expanding e-commerce landscape. Failing to optimize this feature meant leaving extensive money on the table; moving checkout adoption to a target model of 30% unlocks US$25M–$40M in annual regional logistics savings for every 10% adoption lift by systematically cutting down failed home deliveries.\n\n\nThe Objective: Turn a passive, underutilized offline delivery option into a highly shareable, routine choice in Shopee's highest-volume market: Indonesia.\n\n2. The Target Users\n\nThe exercise hyper-focused on two deeply digitized segments within the Indonesian market whose lifestyle constraints matched the operational advantages of localized parcel collection hubs:\n\n- On-the-Go Commuters: Active daily travelers using public transit, trains, or motorbikes whose primary constraint is timing, efficiency, and route layout.\n\n- Privacy-Seeking Gen Z Digital Natives: Young consumers living in dense or shared housing environments who heavily prioritize discretion regarding their purchases and want to skip conversational interactions with cashiers or delivery personnel.\n\n\n3. What Was Discovered (The Data Drivers)\n\nBy analyzing localized user-behavior datasets rather than relying on generic page metrics, the exercise bypassed minor technical variables (like app loading speeds) and uncovered the true systemic behavioral barriers preventing feature adoption:\n\n- The Off-App Discovery Gap (82%): Data revealed that 82% of users discover net-new platform features externally via short-form social video apps (TikTok/Instagram Reels) rather than navigating or reading banners on the Shopee App homepage. Homepage marketing was functionally screaming into an empty room.\n\n- The Routine Detour Friction (47%): Roughly 47% of prospective users refuse pickup options simply because they are misaligned with their daily transit routes. If choosing a pickup spot requires an active detour away from their normal path home, users immediately default back to standard home delivery.\n\n- The Gen Z Discretion Mandate (72%): An overwhelming 72% of Gen Z consumers explicitly select neighborhood convenience store collection to guarantee total personal privacy, specifically wanting to keep package contents completely hidden from overbearing roommates, doormen, or family members.\n\n- Price Sensitivities (65%): Post-checkout surveys confirmed 65% of regional buyers demand completely waived or significantly discounted shipping fees to justify manually walking to collect an item rather than waiting for door-to-door delivery.\n\n4. The Strategic Output\n\nThese discoveries proved that a simple marketing banner or general discount coupon wouldn't work. The final solution had to be an interconnected flywheel:\n\nUsing highly contextual Digital Marketing (TikTok audio trends to solve the 82% discovery gap) to pull users into a frictionless Product UI update (the \"Commute Sync\" map to solve the 47% detour friction), which finally dropped them into an optimized Physical Experience (automated smart lockers at Alfamart hubs to guarantee the 72% privacy mandate with a 60-day viral \"Golden Ticket\" prize incentive).",
+      "outcome": "1. A Strategic Pivot (From Silos to a Flywheel)\n- The Pivot: Initially, the problem was framed as a logistics awareness issue for banner ads. Behavioral data forced a shift away from static, internal marketing.\n- The New Framework: The proposal became an interconnected Customer Acquisition and Retention Flywheel where marketing, product features, and physical infrastructure rely on one another to sustain conversion loops.\n\n2. A Multi-Platform Prototype Layout\nThe project produced high-fidelity wireframes and multimedia concepts mapping the user journey across interfaces:\n- The Off-App Hook: A social media storyboard prototype for TikTok and Instagram Reels designed to capture the 82% off-app discovery gap.\n- The Core Interface Update: An in-app UI/UX mockup of the Commute Sync Checkout Map, which captures the 47% route-sensitive segment by surfacing pickup points along a user's existing commute.\n- The Physical Prototype Asset: A 10-second campaign concept video (shopee_dropin_concept.mp4) demonstrating the hook, audio-visual transitions, and gamified locker feedback loops for the #ShopeeDropIn rollout.\n\n3. A Critical Financial Decision (CapEx vs. OpEx)\nTo protect margins and meet executive criteria, the 10,000,000 USD budget was restructured:\n- The Time-Bound Decision: The Golden Ticket Locker lottery was restricted to a 60-day launch window to break user habit inertia without creating permanent operational expenses.\n- The ROI Capital Split: Physical locker manufacturing (2.5M USD) was moved to a Logistics CapEx line item. This ensures the 10M USD budget functions entirely as demand-driving OpEx, creating a transparent ROI model supported by the projected 25M to 40M USD in annual logistics savings.",
+      "link": "https://drive.google.com/drive/folders/1vwTOZBK3uqynPbmYkbJUVN997n5kU297?usp=sharing"
     }
   ],
   "writing": [
@@ -93,10 +92,10 @@ const PORTFOLIO = {
   "experience": [
     {
       "id": "exp-one",
-      "role": "Role Title",
-      "company": "Company / Organisation",
-      "period": "Jun 2025 – Aug 2025",
-      "type": "Internship",
+      "role": "Administrative Assistant",
+      "company": "Prudential Assurance (VCO Agency)",
+      "period": "Feb - Mar 2025",
+      "type": "Part-Time",
       "problem": "What business problem were you brought in to solve?",
       "stakeholders": "Who were the stakeholders?",
       "constraints": "What constraints did you work under?",
