@@ -127,15 +127,15 @@ const PORTFOLIO = {
   "leadership": [
     {
       "id": "lead-one",
-      "title": "Role / Initiative",
-      "organisation": "Organisation",
-      "period": "2024 – Present",
-      "type": "Student Organisation",
-      "impact": "Describe the impact you had — not what you did, but what changed because you were there.",
-      "teamSize": "",
+      "title": "Vice President",
+      "organisation": "Red Cross Youth (Nanyang JC Chapter)",
+      "period": "2023-2024",
+      "type": "Co-Curricular Activity",
+      "impact": "- Served as one of six Exco members, providing leadership for a 30-member Red Cross Youth chapter through program planning, volunteer management, and operational coordination.\n\n- Directed the planning and execution of the school's biannual Blood Donation Drive as Overall IC, coordinating cross-functional stakeholders, logistics, and volunteer deployment.\n\n- Led the First Aiders on Wheels initiative by partnering with Singapore Red Cross Headquarters, enabling student volunteers to deliver first aid support at East Coast Park community events.\n\n- Managed chapter proposals and social media communications while receiving the NYJC Individual Award in recognition of leadership, service contributions, and appointment as a Red Cross Youth leader.",
+      "teamSize": "~30",
       "skills": [
         "Leadership",
-        "Event Planning"
+        "Event & Proposal Planning"
       ]
     }
   ],
