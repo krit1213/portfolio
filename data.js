@@ -298,6 +298,14 @@ const PORTFOLIO = {
       "year": "2025",
       "category": "Finance, Sustainability",
       "link": ""
+    },
+    {
+      "id": "mg2aq0z",
+      "name": "Inside LVMH",
+      "issuer": "LVMH",
+      "year": "2025",
+      "category": "Creation & Branding, Operations & Supply Chain",
+      "link": ""
     }
   ],
   "problems": [
