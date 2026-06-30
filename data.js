@@ -5,7 +5,7 @@
 const PORTFOLIO = {
   "name": "Krithiga Kaleeswaran",
   "tagline": "Learning by building!",
-  "intro": "",
+  "intro": "Hi, I am Krithiga. I enjoy building products that solve real problems, especially at the intersection of AI and technology. I am always curious to learn, experiment with new ideas, and turn them into something people genuinely find useful.",
   "photo": "",
   "email": "krithigak@hotmail.com",
   "github": "https://github.com/krit1213",
