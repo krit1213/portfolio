@@ -12,16 +12,17 @@ const PORTFOLIO = {
   "linkedin": "",
   "resumePDF": "",
   "about": {
-    "journey": "",
-    "passion": "",
+    "journey": "My journey has been shaped by a curiosity to learn, a passion for solving problems, and a desire to create meaningful impact. From leading community initiatives and volunteering to building AI-powered solutions and exploring enterprise technology through global industry exposure, every experience has helped me grow both personally and professionally. Along the way, I've discovered that my passion lies at the intersection of technology, business, and innovation. Using technology not just to build software, but to create solutions that make a difference.",
+    "passion": "I build because I believe technology should make a meaningful difference. For me, building is more than writing code. It is about understanding people's challenges, asking the right questions, and creating solutions that genuinely improve the way they live or work. Every project is an opportunity to learn, experiment, and transform an idea into something useful. What motivates me most is knowing that even a simple idea, when built thoughtfully, has the potential to create lasting impact.",
     "interests": [
       "AI & LLM applications",
       "Product engineering",
       "Developer tooling",
-      "Human-computer interaction"
+      "Enterprise Technology",
+      "Digital Transformation"
     ],
-    "values": "",
-    "aspirations": ""
+    "values": "I believe meaningful technology begins with understanding people. My values are rooted in curiosity, integrity, empathy, and continuous growth. I strive to approach every opportunity with an open mind, take ownership of challenges, and never stop learning. Whether I am leading a team, building a product, or serving the community, I aim to create solutions that are thoughtful, practical, and driven by purpose rather than technology alone.",
+    "aspirations": "I aspire to build a career where technology, business, and innovation come together to solve meaningful problems. My goal is to design intelligent products and enterprise solutions that improve the way people and organisations work while creating lasting value. As I grow, I hope to become a technology leader who bridges technical expertise with strategic thinking, leading teams that drive innovation, digital transformation, and positive impact at scale."
   },
   "projects": [
     {
@@ -189,14 +190,7 @@ const PORTFOLIO = {
     ]
   },
   "skills": {
-    "languages": [
-      "Python",
-      "Java",
-      "JavaScript",
-      "C",
-      "SQL",
-      "HTML/CSS"
-    ],
+    "languages": [],
     "frameworks": [
       "React",
       "Flask",
