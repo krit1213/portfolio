@@ -306,6 +306,14 @@ const PORTFOLIO = {
       "year": "2025",
       "category": "Creation & Branding, Operations & Supply Chain",
       "link": ""
+    },
+    {
+      "id": "8goppkj",
+      "name": "Google IT Automation with Python",
+      "issuer": "Google",
+      "year": "2025",
+      "category": "Technical",
+      "link": ""
     }
   ],
   "problems": [
