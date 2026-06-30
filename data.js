@@ -251,11 +251,11 @@ const PORTFOLIO = {
       "link": "assets/Coursera_8YZHWI2SM12G-2.pdf"
     },
     {
-      "name": "Add your certifications here",
-      "issuer": "Issuer",
-      "year": "2025",
-      "category": "AI",
-      "link": ""
+      "name": "Visual Elements of User Interface Design",
+      "issuer": "California Institute of the Arts",
+      "year": "May 2026",
+      "category": "UI",
+      "link": "assets/Coursera_C96G5YYZOSBJ-2.pdf"
     }
   ],
   "problems": [
