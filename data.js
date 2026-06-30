@@ -137,6 +137,16 @@ const PORTFOLIO = {
         "Leadership",
         "Event & Proposal Planning"
       ]
+    },
+    {
+      "id": "3lpawfx",
+      "title": "Orientation Group Leader",
+      "organisation": "NUS School of Computing",
+      "period": "July 2024",
+      "type": "Freshmen Orientation Week",
+      "impact": "",
+      "teamSize": "",
+      "skills": []
     }
   ],
   "learning": {
