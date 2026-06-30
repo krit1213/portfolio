@@ -503,7 +503,46 @@
 <script>
 
 // ── Working copy of PORTFOLIO ───────────────────────────────────
+// Priority: GitHub (source of truth) → localStorage cache → bundled data.js
 let P = JSON.parse(JSON.stringify(PORTFOLIO));
+
+async function loadLatestData() {
+  // 1. Try to pull the live data.js from GitHub
+  if (gh.isConfigured()) {
+    setStatus('saving', 'Loading latest data from GitHub…');
+    try {
+      const file = await gh.getFile('data.js');
+      if (file.ok && file.exists) {
+        // Extract the PORTFOLIO object from the JS file string
+        const match = file.content.match(/const PORTFOLIO\s*=\s*(\{[\s\S]*\});?\s*$/m);
+        if (match) {
+          const parsed = JSON.parse(match[1]);
+          P = parsed;
+          localStorage.setItem('portfolio-cache', JSON.stringify(P));
+          setStatus('saved', 'Loaded from GitHub ✓');
+          setTimeout(() => setStatus('', ''), 2000);
+          return;
+        }
+      }
+    } catch (e) {
+      // Fall through to cache
+    }
+  }
+
+  // 2. Fall back to localStorage cache (last successful save)
+  const cached = localStorage.getItem('portfolio-cache');
+  if (cached) {
+    try {
+      P = JSON.parse(cached);
+      setStatus('saved', 'Loaded from local cache');
+      setTimeout(() => setStatus('', ''), 2000);
+      return;
+    } catch (e) {}
+  }
+
+  // 3. Fall back to bundled data.js (fresh install)
+  P = JSON.parse(JSON.stringify(PORTFOLIO));
+}
 
 // ── Nav panels ─────────────────────────────────────────────────
 const PANELS = [
@@ -1029,8 +1068,10 @@ async function saveToGitHub() {
   setStatus('saving', 'Saving…');
   const result = await gh.saveData(P);
   if (result.ok) {
+    // Cache locally so next open doesn't revert
+    localStorage.setItem('portfolio-cache', JSON.stringify(P));
     setStatus('saved', 'Saved ✓');
-    toast('Portfolio saved to GitHub! Changes will appear after GitHub Pages rebuilds (usually ~30s).', 'success');
+    toast('Saved! Your live site will update in ~30 seconds.', 'success');
   } else {
     setStatus('error', 'Failed');
     toast('Save failed: ' + result.error, 'error');
@@ -1057,8 +1098,9 @@ function uid() { return Math.random().toString(36).slice(2, 9); }
 function esc(s) { return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
 // ── Init ─────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   buildNav();
+  await loadLatestData();
   showPanel('github');
 });
 </script>
