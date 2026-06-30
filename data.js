@@ -3,13 +3,13 @@
 // ═══════════════════════════════════════════════════════════════
 
 const PORTFOLIO = {
-  "name": "Krithiga Kaleeswaran",
-  "tagline": "Learning by building!",
-  "intro": "Hi, I am Krithiga. I enjoy building products that solve real problems, especially at the intersection of AI and technology. I am always curious to learn, experiment with new ideas, and turn them into something people genuinely find useful.",
-  "photo": "assets/Kaleeswaran_Krithiga.jpg",
-  "email": "krithigak@hotmail.com",
-  "github": "https://github.com/krit1213",
-  "linkedin": "linkedin.com/in/krithigakaleeswaran",
+  "name": "",
+  "tagline": "",
+  "intro": "",
+  "photo": "",
+  "email": "",
+  "github": "",
+  "linkedin": "",
   "resumePDF": "",
   "about": {
     "journey": "",
@@ -269,8 +269,8 @@ const PORTFOLIO = {
   ],
   "currentlyBuilding": [
     {
-      "title": "This Portfolio",
-      "description": "Iterating on the CS3216 portfolio — adding content, refining the narrative.",
+      "title": "Personal Portfolio Website",
+      "description": "",
       "stage": "Active",
       "link": ""
     }
