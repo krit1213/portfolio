@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Learning Journey</div>
+        <h1 class="page-title">Always in Progress</h1>
+        <p class="page-subtitle">A timeline of milestones, what I'm learning now, and what's on the horizon.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Timeline</div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;flex-wrap:wrap" id="learning-cols">
+        <div>
+          <div class="section-title">Currently Learning</div>
+          <ul id="current-list" style="list-style:none;display:flex;flex-direction:column;gap:8px"></ul>
+        </div>
+        <div>
+          <div class="section-title">Exploring Next</div>
+          <ul id="exploring-list" style="list-style:none;display:flex;flex-direction:column;gap:8px"></ul>
+        </div>
+      </div>
+
+      <div class="section" style="margin-top:40px">
+        <div class="section-title">Courses</div>
+        <div class="cert-list" id="courses-list"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Reading List</div>
+        <div id="reading-list" style="display:flex;flex-direction:column;gap:8px"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Research Interests</div>
+        <div class="pill-list" id="research-list"></div>
+      </div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Learning — " + PORTFOLIO.name;
+      initNav();
+      const l = PORTFOLIO.learning;
+
+      document.getElementById("timeline").innerHTML = l.timeline.map(t => `
+        <div class="timeline-item">
+          <div class="timeline-year">${t.year}</div>
+          <div class="timeline-text">${t.milestone}</div>
+        </div>`).join("");
+
+      const liItem = text => `<li style="font-size:14px;color:var(--text2);display:flex;align-items:flex-start;gap:8px">
+        <span style="color:var(--accent);margin-top:2px">▸</span>${text}</li>`;
+
+      document.getElementById("current-list").innerHTML   = l.current.map(liItem).join("");
+      document.getElementById("exploring-list").innerHTML = l.exploring.map(liItem).join("");
+
+      document.getElementById("courses-list").innerHTML = l.courses.map(c => `
+        <div class="cert-item">
+          <div class="cert-dot"></div>
+          <div>
+            <div class="cert-name">${c.name}</div>
+            <div class="cert-meta">${c.institution} · ${c.year}</div>
+          </div>
+        </div>`).join("");
+
+      document.getElementById("reading-list").innerHTML = l.reading.map(book => `
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:14px;color:var(--text2)">
+          <span style="color:var(--accent)">📖</span>${book}
+        </div>`).join("");
+
+      document.getElementById("research-list").innerHTML = l.research.map(r => `<span class="pill">${r}</span>`).join("");
+    });
+  </script>
+</body>
+</html>

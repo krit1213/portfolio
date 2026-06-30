@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page" id="project-content">
+      <div class="empty-state"><p>Loading…</p></div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      initNav();
+      const params = new URLSearchParams(location.search);
+      const id = params.get("id");
+      const p = PORTFOLIO.projects.find(x => x.id === id);
+
+      const content = document.getElementById("project-content");
+
+      if (!p) {
+        content.innerHTML = `
+          <div class="empty-state">
+            <p>Project not found.</p>
+            <a href="projects.html" class="btn btn-ghost" style="margin-top:16px">← Back to Projects</a>
+          </div>`;
+        return;
+      }
+
+      document.title = p.title + " — " + PORTFOLIO.name;
+
+      const field = (label, value) => value ? `
+        <div class="detail-field">
+          <div class="field-label">${label}</div>
+          <div class="field-value">${value}</div>
+        </div>` : "";
+
+      const screenshots = p.screenshots?.length ? `
+        <div class="detail-field">
+          <div class="field-label">Screenshots</div>
+          <div class="screenshot-grid">
+            ${p.screenshots.map(s => `<img src="${s}" alt="Screenshot" />`).join("")}
+          </div>
+        </div>` : "";
+
+      content.innerHTML = `
+        <div style="margin-bottom:20px">
+          <a href="projects.html" style="font-size:13px;color:var(--text3)">← Projects</a>
+        </div>
+
+        <div class="page-header">
+          <div class="card-tags" style="margin-bottom:12px">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+          <h1 class="page-title">${p.title}</h1>
+          <p class="page-subtitle">${p.subtitle}</p>
+          <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap">
+            ${p.demo   ? `<a href="${p.demo}"   target="_blank" class="btn btn-primary">Live Demo →</a>` : ""}
+            ${p.github ? `<a href="${p.github}" target="_blank" class="btn btn-ghost">GitHub</a>` : ""}
+          </div>
+        </div>
+
+        <div class="detail-hero">
+          <div class="detail-grid">
+            ${field("Problem Statement", p.problem)}
+            ${field("Target Users", p.users)}
+          </div>
+          ${field("Solution Overview", p.solution)}
+          ${field("Product Vision", p.vision)}
+          <div class="detail-grid">
+            ${field("My Role", p.role)}
+            ${field("Team", p.team)}
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Design Process</div>
+          ${field("", p.designProcess)}
+        </div>
+
+        <div class="section">
+          <div class="section-title">Architecture</div>
+          ${field("", p.architecture)}
+          <div style="margin-top:16px">${screenshots}</div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Technologies</div>
+          <div class="card-tags">${p.technologies.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Challenges & Trade-offs</div>
+          <div class="detail-grid">
+            ${field("Challenges", p.challenges)}
+            ${field("Design Trade-offs", p.tradeoffs)}
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Results & Reflection</div>
+          ${field("Results", p.results)}
+          ${field("Lessons Learned", p.lessons)}
+          ${field("Future Improvements", p.future)}
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

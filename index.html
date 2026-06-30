@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+
+  <main id="main">
+    <div id="home-hero">
+      <div class="hero-badge">Available for opportunities · Singapore</div>
+
+      <h1 class="hero-name" id="hero-name"></h1>
+      <p class="hero-tagline" id="hero-tagline"></p>
+      <p class="hero-intro" id="hero-intro"></p>
+
+      <div class="hero-links" id="hero-links"></div>
+
+      <div class="hero-nav-grid" id="hero-nav"></div>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = PORTFOLIO.name + " — Portfolio";
+      initNav();
+
+      document.getElementById("hero-name").innerHTML =
+        PORTFOLIO.name.replace(" ", "&nbsp;<span>") + "</span>";
+
+      document.getElementById("hero-tagline").textContent = PORTFOLIO.tagline;
+      document.getElementById("hero-intro").textContent   = PORTFOLIO.intro;
+
+      document.getElementById("hero-links").innerHTML = `
+        <a href="projects.html" class="btn btn-primary">View Projects ★</a>
+        <a href="${PORTFOLIO.github}" target="_blank" class="btn btn-ghost">GitHub</a>
+        <a href="${PORTFOLIO.linkedin}" target="_blank" class="btn btn-ghost">LinkedIn</a>
+        <a href="mailto:${PORTFOLIO.email}" class="btn btn-ghost">Email</a>
+      `;
+
+      const navItems = [
+        { href:"about.html",          label:"About Me" },
+        { href:"projects.html",       label:"Projects ★",        star:true },
+        { href:"ai.html",             label:"AI & Innovation" },
+        { href:"product.html",        label:"Product Thinking" },
+        { href:"writing.html",        label:"Writing" },
+        { href:"experience.html",     label:"Experience" },
+        { href:"leadership.html",     label:"Leadership" },
+        { href:"learning.html",       label:"Learning Journey" },
+        { href:"skills.html",         label:"Skills" },
+        { href:"certifications.html", label:"Certifications" },
+        { href:"resume.html",         label:"Resume" },
+        { href:"contact.html",        label:"Contact" },
+      ];
+
+      document.getElementById("hero-nav").innerHTML = navItems.map(item => `
+        <a href="${item.href}" class="hero-nav-item">
+          ${item.label}
+          ${item.star ? '<span class="hn-star">★</span>' : ""}
+        </a>`).join("");
+    });
+  </script>
+</body>
+</html>

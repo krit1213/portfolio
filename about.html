@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">About Me</div>
+        <h1 class="page-title" id="about-name"></h1>
+        <p class="page-subtitle">My story, values, and what I'm building toward.</p>
+      </div>
+
+      <div id="about-photo-wrap"></div>
+
+      <div class="section">
+        <div class="section-title">My Journey</div>
+        <div class="prose"><p id="about-journey"></p></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Why I Build</div>
+        <div class="prose"><p id="about-passion"></p></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Current Interests</div>
+        <div class="pill-list" id="about-interests"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Values</div>
+        <div class="prose"><p id="about-values"></p></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Aspirations</div>
+        <div class="prose"><p id="about-aspirations"></p></div>
+      </div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "About — " + PORTFOLIO.name;
+      initNav();
+
+      document.getElementById("about-name").textContent = PORTFOLIO.name;
+
+      const photoWrap = document.getElementById("about-photo-wrap");
+      if (PORTFOLIO.photo) {
+        photoWrap.innerHTML = `<img src="${PORTFOLIO.photo}" alt="${PORTFOLIO.name}" class="about-photo" />`;
+      } else {
+        photoWrap.innerHTML = `<div class="about-photo-placeholder">👤</div>`;
+      }
+
+      const a = PORTFOLIO.about;
+      document.getElementById("about-journey").textContent     = a.journey;
+      document.getElementById("about-passion").textContent     = a.passion;
+      document.getElementById("about-values").textContent      = a.values;
+      document.getElementById("about-aspirations").textContent = a.aspirations;
+
+      document.getElementById("about-interests").innerHTML =
+        a.interests.map(i => `<span class="pill">${i}</span>`).join("");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Certifications</div>
+        <h1 class="page-title">Credentials</h1>
+        <p class="page-subtitle">Supporting credibility — not the headline. The projects above tell the real story.</p>
+      </div>
+      <div id="certs-content"></div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Certifications — " + PORTFOLIO.name;
+      initNav();
+      const certs = PORTFOLIO.certifications;
+      const categories = [...new Set(certs.map(c => c.category))];
+      document.getElementById("certs-content").innerHTML = categories.map(cat => `
+        <div class="section">
+          <div class="section-title">${cat}</div>
+          <div class="cert-list">
+            ${certs.filter(c=>c.category===cat).map(c=>`
+              <div class="cert-item">
+                <div class="cert-dot"></div>
+                <div style="flex:1">
+                  <div class="cert-name">${c.name}</div>
+                  <div class="cert-meta">${c.issuer} · ${c.year}</div>
+                </div>
+                ${c.link ? `<a href="${c.link}" target="_blank" class="btn btn-ghost cert-link" style="font-size:12px;padding:5px 12px">View →</a>` : ""}
+              </div>`).join("")}
+          </div>
+        </div>`).join("");
+    });
+  </script>
+</body>
+</html>

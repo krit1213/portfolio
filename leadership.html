@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Leadership & Community</div>
+        <h1 class="page-title">Who I Am Beyond the Code</h1>
+        <p class="page-subtitle">Impact, not responsibilities. What changed because I showed up.</p>
+      </div>
+      <div class="card-grid" id="leadership-grid"></div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Leadership — " + PORTFOLIO.name;
+      initNav();
+      const grid = document.getElementById("leadership-grid");
+      if (!PORTFOLIO.leadership.length) {
+        grid.innerHTML = `<div class="empty-state"><p>Add leadership roles in <code>data.js</code> → <code>leadership</code></p></div>`;
+      } else {
+        grid.innerHTML = PORTFOLIO.leadership.map(l => `
+          <div class="card">
+            <div class="card-label">${l.type} · ${l.period}</div>
+            <div class="card-title">${l.title}</div>
+            <div class="card-desc" style="font-size:12px;color:var(--accent);margin-bottom:8px">${l.organisation}</div>
+            <div class="card-desc">${l.impact}</div>
+            <div class="card-tags" style="margin-top:12px">${l.skills.map(s=>`<span class="tag">${s}</span>`).join("")}</div>
+          </div>`).join("");
+      }
+    });
+  </script>
+</body>
+</html>

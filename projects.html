@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex; flex-direction: column;
+    }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .project-card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .project-card-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+    .project-card-sub { font-size: 13.5px; color: var(--text2); margin-bottom: 14px; flex: 1; }
+    .project-card-footer { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+    .featured-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      color: var(--yellow);
+      border: 1px solid color-mix(in srgb, var(--yellow) 30%, transparent);
+      background: color-mix(in srgb, var(--yellow) 10%, transparent);
+      padding: 2px 8px; border-radius: 20px; margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Featured Projects ★</div>
+        <h1 class="page-title">Things I've Built</h1>
+        <p class="page-subtitle">Each project is a story: a problem I found worth solving, a team I worked with, and something I learned.</p>
+      </div>
+      <div class="card-grid" id="projects-grid"></div>
+
+      <div id="hackathons-section" style="margin-top:56px">
+        <div class="section-title">Hackathons & Competitions</div>
+        <div class="card-grid" id="hackathons-grid"></div>
+      </div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Projects — " + PORTFOLIO.name;
+      initNav();
+
+      const grid = document.getElementById("projects-grid");
+      if (!PORTFOLIO.projects.length) {
+        grid.innerHTML = `<div class="empty-state"><p>Add your projects in <code>data.js</code></p></div>`;
+      } else {
+        grid.innerHTML = PORTFOLIO.projects.map(p => `
+          <div class="project-card">
+            ${p.featured ? '<span class="featured-badge">★ Featured</span>' : ''}
+            <div class="project-card-tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+            <div class="project-card-title">${p.title}</div>
+            <div class="project-card-sub">${p.subtitle}</div>
+            <div class="project-card-footer">
+              <a href="project.html?id=${p.id}" class="btn btn-primary" style="font-size:12px;padding:7px 14px">View Case Study →</a>
+              ${p.github ? `<a href="${p.github}" target="_blank" class="btn btn-ghost" style="font-size:12px;padding:7px 14px">GitHub</a>` : ""}
+              ${p.demo   ? `<a href="${p.demo}"   target="_blank" class="btn btn-ghost" style="font-size:12px;padding:7px 14px">Demo</a>` : ""}
+            </div>
+          </div>`).join("");
+      }
+
+      const hgrid = document.getElementById("hackathons-grid");
+      const hacks = PORTFOLIO.hackathons || [];
+      if (!hacks.length) {
+        hgrid.innerHTML = `<div class="empty-state"><p>Add hackathons in <code>data.js</code> → <code>hackathons</code></p></div>`;
+      } else {
+        hgrid.innerHTML = hacks.map(h => `
+          <div class="card">
+            <div class="card-label">${h.date} · ${h.organiser}</div>
+            <div class="card-title">${h.name}</div>
+            <div class="card-desc">${h.challenge}</div>
+            <div class="card-tags">${["Result: " + h.result].map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+            <div style="margin-top:12px">
+              <a href="project.html?id=${h.id}&type=hack" class="btn btn-ghost" style="font-size:12px;padding:6px 12px">Details →</a>
+            </div>
+          </div>`).join("");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .exp-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px; margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+    .exp-card:hover { border-color: var(--accent); }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .exp-role { font-size: 20px; font-weight: 800; }
+    .exp-company { font-size: 14px; color: var(--accent); margin-top: 2px; }
+    .exp-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text3); text-align: right; }
+  </style>
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Industry Experience</div>
+        <h1 class="page-title">Where I've Applied It</h1>
+        <p class="page-subtitle">Not job descriptions — case studies. The real problems, constraints, and lessons.</p>
+      </div>
+      <div id="exp-list"></div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Experience — " + PORTFOLIO.name;
+      initNav();
+      const list = document.getElementById("exp-list");
+      if (!PORTFOLIO.experience.length) {
+        list.innerHTML = `<div class="empty-state"><p>Add experience in <code>data.js</code> → <code>experience</code></p></div>`;
+        return;
+      }
+      const field = (label, value) => value ? `
+        <div class="detail-field">
+          <div class="field-label">${label}</div>
+          <div class="field-value">${value}</div>
+        </div>` : "";
+
+      list.innerHTML = PORTFOLIO.experience.map(e => `
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">${e.role}</div>
+              <div class="exp-company">${e.company}</div>
+            </div>
+            <div class="exp-meta">${e.type}<br>${e.period}</div>
+          </div>
+          <div class="detail-grid">
+            ${field("Business Problem", e.problem)}
+            ${field("Stakeholders", e.stakeholders)}
+          </div>
+          ${field("Constraints", e.constraints)}
+          ${field("Approach", e.approach)}
+          ${e.architecture ? field("Architecture", e.architecture) : ""}
+          <div class="detail-grid">
+            ${field("Key Decisions", e.decisions)}
+            ${field("Outcome", e.outcome)}
+          </div>
+          ${field("Lessons Learned", e.lessons)}
+        </div>`).join("");
+    });
+  </script>
+</body>
+</html>

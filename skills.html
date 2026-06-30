@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Skills & Toolbox</div>
+        <h1 class="page-title">My Technical Stack</h1>
+        <p class="page-subtitle">Tools I reach for. Edit <code>data.js → skills</code> to keep this current.</p>
+      </div>
+      <div id="skills-content"></div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Skills — " + PORTFOLIO.name;
+      initNav();
+      const s = PORTFOLIO.skills;
+      const groups = [
+        { label: "Programming Languages", key: "languages" },
+        { label: "Frameworks & Libraries", key: "frameworks" },
+        { label: "AI Tools",               key: "ai" },
+        { label: "Cloud Platforms",        key: "cloud" },
+        { label: "Design Tools",           key: "design" },
+        { label: "Databases",              key: "databases" },
+        { label: "Dev Tools",              key: "devtools" },
+        { label: "Product Tools",          key: "product" },
+      ];
+      document.getElementById("skills-content").innerHTML = groups.map(g => `
+        <div class="skills-group">
+          <div class="skills-group-title">${g.label}</div>
+          <div class="skills-chips">${(s[g.key]||[]).map(sk=>`<span class="skill-chip">${sk}</span>`).join("")}</div>
+        </div>`).join("");
+    });
+  </script>
+</body>
+</html>

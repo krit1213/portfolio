@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Contact</div>
+        <h1 class="page-title">Let's Talk</h1>
+        <p class="page-subtitle">Whether it's a project, an opportunity, or just a good conversation — I'm always open.</p>
+      </div>
+      <div class="contact-list" id="contact-list"></div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Contact — " + PORTFOLIO.name;
+      initNav();
+      const items = [
+        { icon: "EMAIL", label: "Email", value: PORTFOLIO.email, href: `mailto:${PORTFOLIO.email}` },
+        { icon: "GH",    label: "GitHub",   value: PORTFOLIO.github,   href: PORTFOLIO.github },
+        { icon: "LI",    label: "LinkedIn", value: PORTFOLIO.linkedin, href: PORTFOLIO.linkedin },
+      ];
+      document.getElementById("contact-list").innerHTML = items.map(item => `
+        <a href="${item.href}" target="${item.href.startsWith('mailto')? '_self':'_blank'}" class="contact-row" style="text-decoration:none">
+          <div class="contact-icon">${item.icon}</div>
+          <div>
+            <div class="contact-label">${item.label}</div>
+            <div class="contact-value">${item.value}</div>
+          </div>
+          <span style="margin-left:auto;color:var(--text3);font-size:18px">→</span>
+        </a>`).join("");
+    });
+  </script>
+</body>
+</html>

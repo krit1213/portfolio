@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Resume</div>
+        <h1 class="page-title">Summary</h1>
+        <p class="page-subtitle">A compressed version of everything on this site.</p>
+      </div>
+      <div style="display:flex;gap:12px;margin-bottom:32px" id="resume-actions"></div>
+      <div id="resume-embed-wrap"></div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Resume — " + PORTFOLIO.name;
+      initNav();
+      const actions = document.getElementById("resume-actions");
+      const embedWrap = document.getElementById("resume-embed-wrap");
+
+      if (PORTFOLIO.resumePDF) {
+        actions.innerHTML = `
+          <a href="${PORTFOLIO.resumePDF}" download class="btn btn-primary">Download PDF</a>
+          <a href="${PORTFOLIO.resumePDF}" target="_blank" class="btn btn-ghost">Open in new tab</a>`;
+        embedWrap.innerHTML = `<iframe src="${PORTFOLIO.resumePDF}" class="resume-embed" title="Resume"></iframe>`;
+      } else {
+        actions.innerHTML = `<span style="font-size:14px;color:var(--text3)">Drop your PDF at <code>assets/resume.pdf</code> then set <code>resumePDF</code> in <code>data.js</code>.</span>`;
+        embedWrap.innerHTML = `
+          <div class="empty-state">
+            <p style="margin-bottom:8px">No resume uploaded yet.</p>
+            <p>Create an <code>assets/</code> folder, drop in <code>resume.pdf</code>, and set <code>resumePDF: "assets/resume.pdf"</code> in <code>data.js</code>.</p>
+          </div>`;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & Innovation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">AI & Innovation</div>
+        <h1 class="page-title">Exploring the Frontier</h1>
+        <p class="page-subtitle">Experiments with LLMs, agentic workflows, and AI-powered tools. I learn by building.</p>
+      </div>
+      <div class="card-grid" id="ai-grid"></div>
+
+      <div style="margin-top:56px">
+        <div class="section-title">Currently Building</div>
+        <div class="card-grid" id="current-grid"></div>
+      </div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "AI & Innovation — " + PORTFOLIO.name;
+      initNav();
+
+      const grid = document.getElementById("ai-grid");
+      if (!PORTFOLIO.ai.length) {
+        grid.innerHTML = `<div class="empty-state"><p>Add AI experiments in <code>data.js</code> → <code>ai</code></p></div>`;
+      } else {
+        grid.innerHTML = PORTFOLIO.ai.map(item => `
+          <div class="card">
+            <div class="card-label">${item.tags[0] || "AI"}</div>
+            <div class="card-title">${item.title}</div>
+            <div class="card-desc">${item.description}</div>
+            <blockquote style="border-left:2px solid var(--accent);padding-left:12px;margin:12px 0;font-size:13px;color:var(--text2);font-style:italic">${item.insight}</blockquote>
+            <div class="card-tags">${item.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+            <div style="margin-top:14px;display:flex;gap:8px">
+              ${item.link   ? `<a href="${item.link}"   target="_blank" class="btn btn-primary"  style="font-size:12px;padding:6px 12px">View →</a>` : ""}
+              ${item.github ? `<a href="${item.github}" target="_blank" class="btn btn-ghost"    style="font-size:12px;padding:6px 12px">GitHub</a>` : ""}
+            </div>
+          </div>`).join("");
+      }
+
+      const cgrid = document.getElementById("current-grid");
+      const curr = PORTFOLIO.currentlyBuilding || [];
+      if (!curr.length) {
+        cgrid.innerHTML = `<div class="empty-state"><p>Add current projects in <code>data.js</code> → <code>currentlyBuilding</code></p></div>`;
+      } else {
+        cgrid.innerHTML = curr.map(item => `
+          <div class="card">
+            <div class="card-label" style="color:var(--green)">${item.stage}</div>
+            <div class="card-title">${item.title}</div>
+            <div class="card-desc">${item.description}</div>
+            ${item.link ? `<a href="${item.link}" target="_blank" class="btn btn-ghost" style="font-size:12px;padding:6px 12px;margin-top:10px">Follow →</a>` : ""}
+          </div>`).join("");
+      }
+    });
+  </script>
+</body>
+</html>

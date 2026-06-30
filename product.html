@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Thinking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar"></div>
+  <div id="mobile-header"></div>
+  <div id="mobile-drawer"></div>
+  <main id="main">
+    <div class="page">
+      <div class="page-header">
+        <div class="page-label">Product Thinking</div>
+        <h1 class="page-title">How I Think About Problems</h1>
+        <p class="page-subtitle">User research, personas, wireframes, MVPs — the work that happens before and after the code.</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Problem Notebook</div>
+        <p style="font-size:14px;color:var(--text3);margin-bottom:20px">Problems I've noticed worth solving. A product engineer's job starts with observation.</p>
+        <div id="problems-list"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Case Studies & Exercises</div>
+        <div class="card-grid" id="product-grid"></div>
+      </div>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.title = "Product Thinking — " + PORTFOLIO.name;
+      initNav();
+
+      // Problem notebook
+      const plist = document.getElementById("problems-list");
+      const problems = PORTFOLIO.problems || [];
+      if (!problems.length) {
+        plist.innerHTML = `<div class="empty-state"><p>Add problems in <code>data.js</code> → <code>problems</code></p></div>`;
+      } else {
+        plist.innerHTML = problems.map(p => `
+          <div class="problem-card">
+            <span class="problem-stage stage-${p.stage.toLowerCase()}">${p.stage}</span>
+            <div class="card-title" style="margin-bottom:8px">${p.title}</div>
+            <div class="field-label">Observation</div>
+            <div class="field-value" style="margin-bottom:12px">${p.observation}</div>
+            <div class="field-label">Why it matters</div>
+            <div class="field-value" style="margin-bottom:12px">${p.whyMatters}</div>
+            <div class="field-label">Rough idea</div>
+            <div class="field-value">${p.idea}</div>
+          </div>`).join("");
+      }
+
+      // Case studies
+      const grid = document.getElementById("product-grid");
+      if (!PORTFOLIO.product.length) {
+        grid.innerHTML = `<div class="empty-state"><p>Add product thinking exercises in <code>data.js</code> → <code>product</code></p></div>`;
+      } else {
+        grid.innerHTML = PORTFOLIO.product.map(item => `
+          <div class="card">
+            <div class="card-label">${item.type}</div>
+            <div class="card-title">${item.title}</div>
+            <div class="card-desc">${item.description}</div>
+            <div class="card-desc" style="margin-top:8px"><strong style="color:var(--text3);font-size:11px;text-transform:uppercase;letter-spacing:0.05em">Outcome</strong><br>${item.outcome}</div>
+            <div class="card-tags" style="margin-top:10px">${item.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+            ${item.link ? `<a href="${item.link}" target="_blank" class="btn btn-ghost" style="margin-top:14px;font-size:12px;padding:6px 12px">View Work →</a>` : ""}
+          </div>`).join("");
+      }
+    });
+  </script>
+</body>
+</html>
