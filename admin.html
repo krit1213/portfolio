@@ -475,6 +475,15 @@
       <div class="item-list" id="list-certifications"></div>
     </div>
 
+    <!-- ══ PANEL: Hackathons ══ -->
+    <div class="admin-panel" id="panel-hackathons">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+        <h2 style="font-size:22px;font-weight:800">Hackathons & Events</h2>
+        <button class="btn btn-primary" onclick="addItem('hackathons')" style="font-size:13px;padding:7px 14px">+ Add Hackathon</button>
+      </div>
+      <div class="item-list" id="list-hackathons"></div>
+    </div>
+
     <!-- ══ PANEL: Problems ══ -->
     <div class="admin-panel" id="panel-problems">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
@@ -558,6 +567,7 @@ const PANELS = [
   { id: 'learning',   label: '◓ Learning Journey' },
   { id: 'skills',     label: '▣ Skills' },
   { id: 'certs',      label: '◔ Certifications' },
+  { id: 'hackathons', label: '⚡ Hackathons' },
   { id: 'problems',   label: '◕ Problem Notebook' },
   { id: 'building',   label: '▸ Currently Building' },
 ];
@@ -596,6 +606,7 @@ function renderPanel(id) {
   if (id === 'experience') renderList('experience');
   if (id === 'leadership') renderList('leadership');
   if (id === 'certs')      renderList('certifications');
+  if (id === 'hackathons') renderList('hackathons');
   if (id === 'problems')   renderList('problems');
   if (id === 'building')   renderList('currentlyBuilding');
   if (id === 'learning')   renderLearning();
@@ -794,6 +805,18 @@ const ITEM_FIELDS = {
     { key:'category', label:'Category (Technical / AI / Cloud)', type:'text' },
     { key:'link', label:'Certificate Link', type:'url' },
   ],
+  hackathons: [
+    { key:'name',       label:'Hackathon Name',              type:'text' },
+    { key:'organiser',  label:'Organiser',                   type:'text' },
+    { key:'date',       label:'Date / Year',                 type:'text' },
+    { key:'challenge',  label:'Problem Statement / Challenge', type:'textarea' },
+    { key:'team',       label:'Team Composition',            type:'text' },
+    { key:'role',       label:'Your Role',                   type:'text' },
+    { key:'solution',   label:'What You Built',              type:'textarea' },
+    { key:'result',     label:'Result / Prize',              type:'text' },
+    { key:'reflection', label:'Reflection — what you\'d do differently', type:'textarea' },
+    { key:'demo',       label:'Demo Link',                   type:'url' },
+  ],
   problems: [
     { key:'title', label:'Problem Title', type:'text' },
     { key:'observation', label:'Observation', type:'textarea' },
@@ -810,9 +833,10 @@ const ITEM_FIELDS = {
 };
 
 function getTitle(key, item) {
-  if (key === 'experience') return item.role || 'New Entry';
-  if (key === 'leadership') return item.title || 'New Entry';
+  if (key === 'experience')    return item.role  || 'New Entry';
+  if (key === 'leadership')    return item.title || 'New Entry';
   if (key === 'certifications') return item.name || 'New Cert';
+  if (key === 'hackathons')    return item.name  || 'New Hackathon';
   return item.title || 'New Entry';
 }
 
