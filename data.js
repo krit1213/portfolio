@@ -265,6 +265,14 @@ const PORTFOLIO = {
       "year": "May 2026",
       "category": "UI",
       "link": "assets/Coursera_C96G5YYZOSBJ-2.pdf"
+    },
+    {
+      "id": "xhfwt53",
+      "name": "Introduction to Sustainability and Sustainable Finance",
+      "issuer": "Singapore Green Finance Centre",
+      "year": "2025",
+      "category": "Finance, Sustainability",
+      "link": ""
     }
   ],
   "problems": [
