@@ -148,6 +148,19 @@ const PORTFOLIO = {
       "skills": [
         "First Aid"
       ]
+    },
+    {
+      "id": "dol9via",
+      "title": "Volunteer",
+      "organisation": "Sengkang General Hospital",
+      "period": "2023 - Present",
+      "type": "Healthcare",
+      "impact": "Volunteering at Sengkang General Hospital taught me that healing goes beyond medical treatment. Sometimes, simply spending time with a patient, listening to their story, or offering encouragement can make a meaningful difference to their hospital experience. It showed me the importance of empathy, patience, and human connection, and reminded me that even small acts of kindness can have a lasting impact on someone's recovery journey.",
+      "teamSize": "-",
+      "skills": [
+        "Communication",
+        "Teamwork"
+      ]
     }
   ],
   "learning": {
