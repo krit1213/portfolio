@@ -244,11 +244,11 @@ const PORTFOLIO = {
   },
   "certifications": [
     {
-      "name": "CS50x",
-      "issuer": "Harvard / edX",
-      "year": "2024",
-      "category": "Technical",
-      "link": ""
+      "name": "Google AI Essentials",
+      "issuer": "Google",
+      "year": "2026",
+      "category": "AI",
+      "link": "assets/Coursera_8YZHWI2SM12G-2.pdf"
     },
     {
       "name": "Add your certifications here",
