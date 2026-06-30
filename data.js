@@ -178,26 +178,24 @@ const PORTFOLIO = {
   "learning": {
     "timeline": [
       {
-        "year": "2023",
-        "milestone": "First Python script — sorted Spotify playlists. Broke three times. Fixed it."
+        "year": "2026",
+        "milestone": "Created my first app & website thr"
       },
       {
-        "year": "2024",
-        "milestone": "Discovered web development. Built first full-stack project."
+        "year": "2026",
+        "milestone": "Exploring Artificial Intelligence"
       },
       {
         "year": "2025",
-        "milestone": "Started NUS CS. Exploring AI/ML and product engineering."
+        "milestone": "Computer Science @ NUS"
       }
     ],
     "current": [
-      "Deep learning fundamentals (fast.ai)",
-      "System design for scalable applications",
-      "Product management frameworks"
+      "Prompt Engineering",
+      "Generative AI",
+      "Product Strategy"
     ],
     "exploring": [
-      "Rust",
-      "LLM fine-tuning",
       "Agentic AI workflows"
     ],
     "courses": [
@@ -207,14 +205,9 @@ const PORTFOLIO = {
         "year": "2026"
       }
     ],
-    "reading": [
-      "The Pragmatic Programmer — David Thomas & Andrew Hunt",
-      "The Mom Test — Rob Fitzpatrick",
-      "Zero to One — Peter Thiel"
-    ],
+    "reading": [],
     "research": [
-      "Human-AI interaction",
-      "Educational technology"
+      "Human-AI interaction"
     ]
   },
   "skills": {
