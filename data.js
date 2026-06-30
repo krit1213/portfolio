@@ -173,6 +173,18 @@ const PORTFOLIO = {
       "skills": [
         "Event Planning"
       ]
+    },
+    {
+      "id": "28ow9oe",
+      "title": "Exco Member",
+      "organisation": "Temasek Wind Ensemble",
+      "period": "2021-2022",
+      "type": "",
+      "impact": "",
+      "teamSize": "",
+      "skills": [
+        "Leadership"
+      ]
     }
   ],
   "learning": {
