@@ -300,7 +300,7 @@ const PORTFOLIO = {
   "currentlyBuilding": [
     {
       "title": "Personal Portfolio Website",
-      "description": "",
+      "description": "This portfolio is a reflection of my journey as a Computer Science student, builder, and lifelong learner. It brings together my projects, leadership experiences, technical skills, and personal reflections, showcasing not only what I have built but also how I think, learn, and grow. More than a collection of achievements, it represents my commitment to creating meaningful technology that solves real-world problems and creates lasting impact.",
       "stage": "Active",
       "link": ""
     }
