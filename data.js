@@ -38,8 +38,15 @@ const PORTFOLIO = {
       "team": "Solo",
       "designProcess": "I didn't want to build just another dashboard or social feed. I built UniSphere around the real frustrations students face: knowing which milestones actually matter and navigating unreliable advice from scattered chat groups.\n\nMy design process focused on four areas:\n\n1. Identifying the Friction – I mapped the stress behind the \"resume arms race\" and designed the platform to replace comparison with clear, actionable guidance.\n\n2. Building for Trust– Verification was a core requirement. The platform is designed around Campus SSO and institutional data so mentors, events, and recommendations are clearly verified.\n\n3. Reducing Decision Fatigue – Instead of an overwhelming feed, I created a structured experience with gap-mapping, milestone tracking, and a transparent dashboard for opportunities.\n\n4. Designing for Focus – I chose a modern dark theme using a 60-30-10 color system: charcoal for comfort, slate for structure, and electric blue to highlight important actions and milestones.",
       "architecture": "",
-      "technologies": [],
-      "tags": [],
+      "technologies": [
+        "Google Antigravity 2.0",
+        "Prompt Engineering"
+      ],
+      "tags": [
+        "Iterative Prototype",
+        "UI/UX Design",
+        "AI-Assisted Development"
+      ],
       "challenges": "Building UniSphere solo without a strong coding background was a steep learning experience. I relied on Google Antigravity 2.0, where my role was less about writing code and more about directing AI agents through clear, detailed prompts.\n\nThe biggest challenges were:\n\n1. Learning prompt engineering – I had to communicate my ideas precisely, as the AI interpreted instructions literally.\n\n2. Testing instead of coding – Since I couldn't debug the code directly, I validated every feature through hands-on testing and described issues clearly for the AI to fix.\n\n3. Avoiding feature overload – I learned to build incrementally, focusing on getting core features right before adding new functionality.\n\n4. Reviewing before execution – Instead of clicking \"Proceed\" immediately, I learned to carefully review the AI's implementation plan to catch incorrect assumptions early.",
       "tradeoffs": "Building UniSphere solo meant making deliberate trade-offs to deliver a stable and useful platform.\n\n1. Simplicity over complexity – I chose a clean, low-anxiety interface instead of a feature-heavy dashboard to keep the experience focused and intuitive.\n\n2. Trust over flexibility – I prioritized structured, verified milestone paths over fully customizable profiles to ensure credibility and authenticity.\n\n3. Stability over automation – Rather than implementing complex automated workflows, I used simpler controls and feature management to keep the platform reliable and maintainable as a solo builder.",
       "results": "Although I didn't write the code myself, effectively managing the AI allowed me to achieve the vision I had for UniSphere:\n\n1. A fully functional three-sided platform serving students, high-achievers, and recruiters within a single ecosystem.\n\n2. A polished interface built around a consistent 60-30-10 dark theme, creating a modern and distraction-free user experience.\n\n3. A personalized gap-mapping feature that transforms user inputs into clear, step-by-step progress, demonstrating how AI-assisted development can deliver meaningful user experiences.",
